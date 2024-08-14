@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Zarape - Combos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('papel pintado.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .nav-link.btn-custom {
+            background-color: #F4EC6A;
+            color: #000;
+            border: 1px;
+            margin: 0 10px;
+        }
+         .header {
+            background-color: #E73F0B; /* Color de fondo para el encabezado */
+            color: #ffffff; /* Color de texto para asegurar legibilidad */
+        }
+        .nav-link.btn-custom.active {
+            background-color: #BBCF4A;
+            color: #FFFFFF;
+        }
+        .eat {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: center;
+            height: 100%;
+        }
+        .eat img {
+            margin-bottom: 15px;
+            width: 100%;
+            height: auto;
+        }
+        .eat .comida {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .eat .price {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+        .eat .quantity {
+            width: 60px;
+            margin: 0 auto 15px auto;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .nav-link.btn-custom {
+            background-color: #F4EC6A;
+            color: #000;
+            border: 1px;
+            margin: 0 10px;
+        }
+
+        .nav-link.btn-custom.active {
+            background-color: #BBCF4A;
+            color: #FFFFFF;
+        }
+        .list-group {
+            background-color: #A11F0C;
+            color: #000;
+        }
+        .mt-3 {
+           background-color: #A11F0C;
+            color: #000; 
+        }
+        .eat {
+            background-color: #F4EC6A;
+        }
+        h5 {
+            background-color: #A11F0C
+        }
+    </style>
+</head>
+<body>
+    <div class="header text-center py-3">
+        <h1>El Zarape</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-auto">
+    <a href="indexinicio de seccion.html">
+        <img src="Untitled Project (1).png" alt="logo" class="logo" width="120">
+    </a>
+</div>
+
+            <div class="col">
+                <nav class="nav justify-content-center">
+                    <a class="nav-link btn btn-custom" href="HTML ALIMENTOS.html">Alimentos</a>
+                    <a class="nav-link btn btn-custom" href="HTML BEBIDAS CLIENT.html">Bebidas</a>
+                    <a class="nav-link btn btn-custom active" href="HTML COMBOS.html">Combos</a>
+                    <a class="nav-link btn btn-custom" href="menu principal.html">Inicio</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <section id="combos" class="eat-menu container mt-4">
+        <div class="row">
+            <!-- Combo 1: Desayuno Completo -->
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/hotcakes-dos-huevos-.jpg" alt="Desayuno Completo"/>
+                    <p class="comida">Desayuno Completo</p>
+                    <p>Huevos al Gusto + Jugo de Naranja + Hot Cakes</p>
+                    <p class="price">$42.00</p>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="combo1-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Desayuno Completo', 42.00, 'combo1-quantity')">Agregar al carrito</button>
+                </div>
+            </div>
+            <!-- Combo 2: Almuerzo Tradicional -->
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/tacos atar.jpeg" alt="Almuerzo Tradicional"/>
+                    <p class="comida">Atardecer relax</p>
+                    <p>Tacos de Pastor + michelada grande</p>
+                    <p class="price">$60.00</p>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="combo2-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Atardecer relax', 60.00, 'combo2-quantity')">Agregar al carrito</button>
+                </div>
+            </div>
+            <!-- Combo 3: Comida Mexicana -->
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/combo chill.jpg" alt="Combo chill"/>
+                    <p class="comida">Combo chill</p>
+                    <p>Chilaquiles Rojos + Jugo de naranja</p>
+                    <p class="price">$42.00</p>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="combo3-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Combo chill', 42.00, 'combo3-quantity')">Agregar al carrito</button>
+                </div>
+            </div>
+            <!-- Combo 4: Snack Ligero -->
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/hot-cakes-helado.jpg" alt="Snack Ligero"/>
+                    <p class="comida">Combo dulce tentacion</p>
+                    <p>Hot-cakes + helado</p>
+                    <p class="price">$29.00</p>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="combo4-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Combo dulce tentacion', 29.00, 'combo4-quantity')">Agregar al carrito</button>
+                </div>
+            </div>
+            <!-- Combo 5: Dulce Tentación -->
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/fit.jpg" alt="Dulce Tentación"/>
+                    <p class="comida">Combo very fit</p>
+                    <p>Ensalada + jugo </p>
+                    <p class="price">$25.00</p>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="combo5-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Combo very fit', 25.00, 'combo5-quantity')">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cart" class="cart container mt-4">
+        <h5>Carrito de Compras</h5>
+        <ul id="cart-items" class="list-group">
+        </ul>
+        <p id="total-price" class="mt-3">Total: $0.00</p>
+    </section>
+    <script>
+    function addToCart(item, price, quantityId) {
+        var quantity = parseInt(document.getElementById(quantityId).value);
+        var cartItems = document.getElementById("cart-items");
+        var totalPriceElement = document.getElementById("total-price");
+        var total = parseFloat(totalPriceElement.innerText.replace('Total: $', ''));
+
+        var newItem = document.createElement("li");
+        newItem.className = "cart-item list-group-item";
+        newItem.innerHTML = `${item} - $${price.toFixed(2)} x ${quantity} 
+            <button class="btn btn-danger btn-sm ml-2" onclick="removeFromCart(this, ${price * quantity})">Eliminar</button>`;
+        cartItems.appendChild(newItem);
+
+        total += price * quantity;
+        totalPriceElement.innerText = `Total: $${total.toFixed(2)}`;
+    }
+
+    function removeFromCart(button, price) {
+        var cartItem = button.parentElement;
+        cartItem.remove();
+
+        var totalPriceElement = document.getElementById("total-price");
+        var total = parseFloat(totalPriceElement.innerText.replace('Total: $', ''));
+
+        total -= price;
+        totalPriceElement.innerText = `Total: $${total.toFixed(2)}`;
+    }
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

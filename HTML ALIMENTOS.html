@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Zarape - Alimentos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .header {
+            background-color: #E73F0B; /* Color de fondo para el encabezado */
+            color: #ffffff; /* Color de texto para asegurar legibilidad */
+        }
+        body {
+            background-image: url('papel pintado.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .nav-link.btn-custom {
+            background-color: #F4EC6A;
+            color: #000;
+            border: 1px;
+            margin: 0 10px;
+        }
+
+        .nav-link.btn-custom.active {
+            background-color: #BBCF4A;
+            color: #FFFFFF;
+        }
+        .eat {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: center;
+            height: 100%;
+        }
+        .eat img {
+            margin-bottom: 15px;
+            width: 100%;
+            height: auto;
+        }
+        .eat .comida {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .eat .price {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+        .eat .quantity {
+            width: 60px;
+            margin: 0 auto 15px auto;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .list-group {
+            background-color: #A11F0C;
+            color: #000;
+        }
+        .mt-3 {
+           background-color: #A11F0C;
+            color: #000; 
+        }
+        .eat {
+            background-color: #F4EC6A;
+        }
+        h5 {
+            background-color: #A11F0C
+        }
+    </style>
+</head>
+<body>
+    <div class="header text-center py-3">
+        <h1>El Zarape</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-auto">
+    <a href="indexinicio de seccion.html">
+        <img src="Untitled Project (1).png" alt="logo" class="logo" width="120">
+    </a>
+</div>
+
+            <div class="col">
+                <nav class="nav justify-content-center">
+                    <a class="nav-link btn btn-custom active" href="HTML ALIMENTOS.html">Alimentos</a>
+                    <a class="nav-link btn btn-custom" href="HTML BEBIDAS CLIENT.html">Bebidas</a>
+                    <a class="nav-link btn btn-custom" href="HTML COMBOS.html">Combos</a>
+                    <a class="nav-link btn btn-custom" href="menu principal.html">Inicio</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <section id="alimentos" class="eat-menu container mt-4">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/chilaquiles-rojos-o-verdes.jpg" alt="Chilaquiles" width="10"/>
+                    <p class="comida">Chilaquiles: Rojos o verdes, frijoles, cebollas y cilantro</p>
+                    <p class="price">$34.00</p>
+                    <select class="form-control mb-2" id="chilaquiles-option">
+                        <option value="Rojos">Rojos</option>
+                        <option value="Verdes">Verdes</option>
+                    </select>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="chilaquiles-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Chilaquiles', 100.00, 'chilaquiles-quantity', 'chilaquiles-option')">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/tortas.jpg" alt="Torta"/>
+                    <p class="comida">Tortas: Bistec, chorizo, pastor, hígado, costilla y lengua</p>
+                    <p class="price">$25.00</p>
+                    <select class="form-control mb-2" id="tortas-option">
+                        <option value="Bistec">Bistec</option>
+                        <option value="Chorizo">Chorizo</option>
+                        <option value="Pastor">Pastor</option>
+                        <option value="Hígado">Hígado</option>
+                        <option value="Costilla">Costilla</option>
+                        <option value="Lengua">Lengua</option>
+                    </select>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="tortas-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Tortas', 40.00, 'tortas-quantity', 'tortas-option')">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/ensalada.jpeg" alt="Ensalada"/>
+                    <p class="comida">Ensalada: Lechuga, pepino, manzana, cereales y miel.</p>
+                    <p class="price">$29.50</p>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="ensalada-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Ensalada', 45.50, 'ensalada-quantity')">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/tacos.jpg" alt="Tacos"/>
+                    <p class="comida">Tacos: Bistec, chorizo, pastor, hígado, costilla y lengua</p>
+                    <p class="price">$15.00</p>
+                    <select class="form-control mb-2" id="tacos-option">
+                        <option value="Bistec">Bistec</option>
+                        <option value="Chorizo">Chorizo</option>
+                        <option value="Pastor">Pastor</option>
+                        <option value="Hígado">Hígado</option>
+                        <option value="Costilla">Costilla</option>
+                        <option value="Lengua">Lengua</option>
+                    </select>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="tacos-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Tacos', 18.00, 'tacos-quantity', 'tacos-option')">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/huevos.jpg" alt="Huevos"/>
+                    <p class="comida">Huevos al Gusto: A la mexicana, estrellados, rancheros.</p>
+                    <p class="price">$37.00</p>
+                    <select class="form-control mb-2" id="huevos-option">
+                        <option value="A la mexicana">A la mexicana</option>
+                        <option value="Estrellados">Estrellados</option>
+                        <option value="Rancheros">Rancheros</option>
+                    </select>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="huevos-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Huevos', 60.00, 'huevos-quantity', 'huevos-option')">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/plato-de-frutas.jpg" alt="Plato de frutas"/>
+                    <p class="comida">Plato de frutas: Manzana, mango, fresa, kiwi, plátano, melón, miel y cereales</p>
+                    <p class="price">$29.00</p>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="frutas-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Frutas', 55.00, 'frutas-quantity')">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/hotcakes.jpg" alt="Hot Cakes"/>
+                    <p class="comida">Hot cakes: Miel, maple, lechera y mermelada de fresa</p>
+                    <p class="price">$25.00</p>
+                    <select class="form-control mb-2" id="hotck-option">
+                        <option value="miel">con miel</option>
+                        <option value="Estrellados">con maple</option>
+                        <option value="lechera">con lechera</option>
+                        <option value="mermelada">con mermelada</option>
+
+                    </select>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="hotcakes-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Hot Cakes', 30.00, 'hotcakes-quantity','hotck-option')">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/helado.jpg" alt="Helado"/>
+                    <p class="comida">Helado: Fresa, chocolate, vainilla, limón, mango y coco</p>
+                    <p class="price">$25.00</p>
+                    <select class="form-control mb-2" id="helado-option">
+                        <option value="Fresa">Fresa</option>
+                        <option value="Chocolate">Chocolate</option>
+                        <option value="Vainilla">Vainilla</option>
+                        <option value="Limón">Limón</option>
+                        <option value="Mango">Mango</option>
+                        <option value="Coco">Coco</option>
+                    </select>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="helado-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Helado', 25.00, 'helado-quantity', 'helado-option')">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cart" class="cart container mt-4">
+        <h5>Carrito de Compras</h5>
+        <ul id="cart-items" class="list-group">
+        </ul>
+        <p id="total-price" class="mt-3">Total: $0.00</p>
+    </section>
+    <footer class="text-center mt-5">
+        <p>© 2024 El Zarape. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function addToCart(item, price, quantityId, typeId) {
+            var quantity = parseInt(document.getElementById(quantityId).value);
+            var type = document.getElementById(typeId).value;
+            var cartItems = document.getElementById("cart-items");
+            var totalPriceElement = document.getElementById("total-price");
+            var total = parseFloat(totalPriceElement.innerText.replace('Total: $', ''));
+            
+            var newItem = document.createElement("li");
+            newItem.className = "cart-item list-group-item";
+            newItem.innerHTML = `${item} (${type}) - $${price.toFixed(2)} x ${quantity} 
+                <button class="btn btn-danger btn-sm ml-2" onclick="removeFromCart(this, ${price * quantity})">Eliminar</button>`;
+            cartItems.appendChild(newItem);
+            
+            total += price * quantity;
+            totalPriceElement.innerText = `Total: $${total.toFixed(2)}`;
+        }
+        
+        function removeFromCart(button, price) {
+            var cartItem = button.parentElement;
+            cartItem.remove();
+            
+            var totalPriceElement = document.getElementById("total-price");
+            var total = parseFloat(totalPriceElement.innerText.replace('Total: $', ''));
+            
+            total -= price;
+            totalPriceElement.innerText = `Total: $${total.toFixed(2)}`;
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

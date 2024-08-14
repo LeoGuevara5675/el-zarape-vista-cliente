@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Zarape - Inicio de Sesión y Registro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('papel pintado.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .header {
+            background-color: #E73F0B; /* Color de fondo para el encabezado */
+            color: #ffffff; /* Color de texto para asegurar legibilidad */
+        }
+        .nav-link.btn-custom {
+            background-color: #F4EC6A;
+            color: #000;
+            border: 1px;
+            margin: 0 10px;
+        }
+        .nav-link.btn-custom.active {
+            background-color: #BBCF4A;
+            color: #FFFFFF;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+        .form-container h3 {
+            margin-bottom: 20px;
+        }
+        .list-group {
+            background-color: #A11F0C;
+            color: #000;
+        }
+        .mt-3 {
+            background-color: #A11F0C;
+            color: #000;
+        }
+        h5 {
+            background-color: #A11F0C;
+        }
+        .logo {
+            max-width: 100%; /* Asegura que el logo no se salga del contenedor */
+            height: auto; /* Mantiene las proporciones del logo */
+        }
+    </style>
+</head>
+<body>
+    <div class="header text-center py-3">
+        <h1>El Zarape</h1>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-auto text-center">
+                <img src="Untitled Project (1).png" alt="logo" class="logo" width="120">
+            </div>
+        </div>
+<div class="row justify-content-center">
+            <div class="col-md-6 form-container">
+                <h3>Registro</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="register-name">Nombre:</label>
+                        <input type="text" class="form-control" id="register-name" placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Nombre de usuario:</label>
+                        <input type="email" class="form-control" id="register-email" placeholder="Ingrese un Nombre de usuario">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Contraseña:</label>
+                        <input type="password" class="form-control" id="register-password" placeholder="Ingrese su contraseña">
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='menu principal.html'">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

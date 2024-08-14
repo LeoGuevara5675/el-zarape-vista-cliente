@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Zarape - Bebidas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('papel pintado.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .eat {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: center;
+            height: 100%;
+        }
+        .eat img {
+            margin-bottom: 15px;
+            width: 100%;
+            height: auto;
+        }
+        .eat .comida {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .eat .price {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+        .eat .quantity {
+            width: 60px;
+            margin: 0 auto 15px auto;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .header {
+            background-color: #E73F0B; /* Color de fondo para el encabezado */
+            color: #ffffff; /* Color de texto para asegurar legibilidad */
+        }
+        .nav-link.btn-custom {
+            background-color: #F4EC6A;
+            color: #000;
+            border: 1px;
+            margin: 0 10px;
+        }
+
+        .nav-link.btn-custom.active {
+            background-color: #BBCF4A;
+            color: #FFFFFF;
+        }
+        .list-group {
+            background-color: #A11F0C;
+            color: #000;
+        }
+        .mt-3 {
+           background-color: #A11F0C;
+            color: #000; 
+        }
+        .eat {
+            background-color: #F4EC6A;
+        }
+        .cart container mt-4 {
+            background-color: #A11F0C
+        }
+        btn btn-primary add-to-cart mt-2{
+            color: #BBCF4A;
+        }
+        h5 {
+            background-color: #A11F0C
+        }
+        header text-right py-3 {
+            background-color: #A11F0C;
+            color: #000;
+            padding-top: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="header text-center py-3">
+        
+        <h1 >El Zarape</h1>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-auto">
+    <a href="indexinicio de seccion.html">
+        <img src="Untitled Project (1).png" alt="logo" class="logo" width="120">
+    </a>
+</div>
+
+            <a href="indexinicio de seccion.html"></a>
+            <div class="col">
+                
+                <nav class="nav justify-content-center">
+                    
+                    <a class="nav-link btn btn-custom" href="HTML ALIMENTOS.html">Alimentos</a>
+                    <a class="nav-link btn btn-custom active" href="HTML BEBIDAS CLIENT.html">Bebidas</a>
+                    <a class="nav-link btn btn-custom" href="HTML COMBOS.html">Combos</a>
+                    <a class="nav-link btn btn-custom" href="menu principal.html">Inicio</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <section id="bebidas" class="eat-menu container mt-4">
+        <div class="row">
+            <!-- Jugos -->
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/jugo.png" alt="jugo"/>
+                    <p class="comida">Jugos</p>
+                    <p class="comida">jugos deliciosos naturalmente preparados con el mejor sabor</p>
+                    <select class="form-control mb-2" id="jugos-type">
+                        <option value="fresa">Fresa</option>
+                        <option value="kiwi">Kiwi</option>
+                        <option value="naranja">Naranja</option>
+                        <option value="piña">Piña</option>
+                        <option value="durazno">Durazno</option>
+                    </select>
+                    <p class="price">$14.00</p>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="jugos-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Jugo', 14.00, 'jugos-quantity', 'jugos-type')">Agregar al carrito</button>
+                </div>
+            </div>
+            <!-- Agua -->
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/WP_ALCALINA_500ML_1000x.png" alt="Agua"/>
+                    <p class="comida">Agua Natural Embotellada</p>
+                    <select class="form-control mb-2" id="agua-type">
+                        <option value="waterpeople">waterpeople</option>
+                        <option value="bonafont">bonafont</option>
+                        <option value="fiji">fiji</option>
+                    </select>
+                    <p class="price">$19.00</p>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="agua-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Agua natural', 19.00, 'agua-quantity', 'agua-type')">Agregar al carrito</button>
+                </div>
+            </div>
+            <!-- Margarita -->
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/mar.png" alt="margarita"/>
+                    <p class="comida">Margarita</p>
+                    <select class="form-control mb-2" id="margarita-type">
+                        <option value="clasica">clasica</option>
+                        <option value="con-sal">de fresa</option>
+                    </select>
+                    <p class="price">$35.00</p>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="margarita-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Margarita', 35.00, 'margarita-quantity', 'margarita-type')">Agregar al carrito</button>
+                </div>
+            </div>
+            <!-- Michelada -->
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/mich.png" alt="michelada"/>
+                    <p class="comida">Michelada</p>
+                    <select class="form-control mb-2" id="michelada-type">
+                        <option value="simple">Chica</option>
+                        <option value="grande">Grande</option>
+                    </select>
+                    <p class="price">$32.00</p>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="michelada-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Michelada', 32.00, 'michelada-quantity', 'michelada-type')">Agregar al carrito</button>
+                </div>
+            </div>
+            <!-- refrescos -->
+            <div class="col-md-4 mb-4">
+                <div class="eat">
+                    <img src="MATERIALES INT/REFRESCOS.png" alt="refrescos"/>
+                    <p class="comida">Refrescos</p>
+                    <select class="form-control mb-2" id="Resfresco-type">
+                        <option value="coca-cola">Coca-cola</option>
+                        <option value="sprite">Sprite</option>
+                        <option value="pepsi">Pepsi</option>
+                        <option value="manzanita">Manzanita</option>
+                        <option value="fanta">Fanta</option>
+                        <option value="dr-pepper">Dr-pepper</option>
+                        <option value="agua mineral">Agua Mineral</option>
+
+                    </select>
+                    <p class="price">$18.00</p>
+                    <input type="number" class="form-control quantity" min="1" value="1" id="Resfresco-quantity">
+                    <button class="btn btn-primary add-to-cart mt-2" onclick="addToCart('Sprite', 18.00, 'Resfresco-quantity', 'Resfresco-type')">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cart" class="cart container mt-4">
+        <h5>Carrito de Compras</h5>
+        <ul id="cart-items" class="list-group">
+        </ul>
+        <p id="total-price" class="mt-3">Total: $0.00</p>
+    </section>
+    <script>
+        function addToCart(item, price, quantityId, typeId) {
+            var quantity = parseInt(document.getElementById(quantityId).value);
+            var type = document.getElementById(typeId).value;
+            var cartItems = document.getElementById("cart-items");
+            var totalPriceElement = document.getElementById("total-price");
+            var total = parseFloat(totalPriceElement.innerText.replace('Total: $', ''));
+            
+            var newItem = document.createElement("li");
+            newItem.className = "cart-item list-group-item";
+            newItem.innerHTML = `${item} (${type}) - $${price.toFixed(2)} x ${quantity} 
+                <button class="btn btn-danger btn-sm ml-2" onclick="removeFromCart(this, ${price * quantity})">Eliminar</button>`;
+            cartItems.appendChild(newItem);
+            
+            total += price * quantity;
+            totalPriceElement.innerText = `Total: $${total.toFixed(2)}`;
+        }
+        
+        function removeFromCart(button, price) {
+            var cartItem = button.parentElement;
+            cartItem.remove();
+            
+            var totalPriceElement = document.getElementById("total-price");
+            var total = parseFloat(totalPriceElement.innerText.replace('Total: $', ''));
+            
+            total -= price;
+            totalPriceElement.innerText = `Total: $${total.toFixed(2)}`;
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
